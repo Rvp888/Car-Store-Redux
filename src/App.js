@@ -11,8 +11,8 @@ function App() {
   const myState = useSelector(store => store)
   const dispatch = useDispatch();
 
-  const handleBuyCar = () => {
-    dispatch(buyCar());
+  const handleBuyCar = (id) => {
+    dispatch(buyCar(id));
   }
 
   const handleSaleCar = () => {
@@ -24,7 +24,7 @@ function App() {
           {
             myState.map((car) => {
               return (
-                <div>
+                <div key={car.id}>
                   <h5>{car.name}</h5>
                   <button onClick={() => handleBuyCar(car.id)}>Buy Car</button>
                 </div>
