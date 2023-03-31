@@ -14,23 +14,27 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  height: 400px;
+  /* height: 400px; */
   margin: 50px;
-  width: 200px;
+  width: 250px;
+  border: 1px solid;
+  padding: 10px;
 }
 
 .heading {
   background-color: #d5d0d0;
   padding: 3px 10px 5px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .car-store {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin: 15px 0 ;
 }
 
 .car-store h5 {
@@ -52,6 +56,7 @@ body {
   padding: 5px;
   font-size: 15px;
   border: 0.1px solid rgb(205, 202, 202) ;
+  margin: 10px 0;
 }
 
 .car-input {
