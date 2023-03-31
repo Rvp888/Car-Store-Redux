@@ -38,3 +38,8 @@ body {
   cursor: pointer;
   padding: 5px 5px;
 }
+
+.add-newcar-btn {
+  padding: 5px;
+  font-size: 15px;
+}

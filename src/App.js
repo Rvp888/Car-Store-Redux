@@ -39,7 +39,7 @@ function App() {
               )
             })
           }
-          <button onClick={() => setIsSaleShow(true)}>Sale Car</button>
+          <button className='add-newcar-btn' onClick={() => setIsSaleShow(true)}>Add New Car</button>
           {
             isSaleShow && <div>
               <input onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
