@@ -8,7 +8,7 @@ export const sellCar = (id) => {
 
 export const addCar = (payload) => {
     return {
-        type: 'ADD',
+        type: 'ADD_CAR',
         payload: payload
     }
 }
