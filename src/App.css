@@ -15,9 +15,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   height: 400px;
   margin: 50px;
   width: 200px;
+}
+
+.heading {
+  background-color: #d5d0d0;
+  padding: 3px 10px 5px;
+  border-radius: 5px;
 }
 
 .car-store {
@@ -41,15 +48,20 @@ body {
 }
 
 .add-newcar-btn {
+  cursor: pointer;
   padding: 5px;
   font-size: 15px;
   border: 0.1px solid rgb(205, 202, 202) ;
 }
 
 .car-input {
-
+  padding: 5px 5px;
+  width: 150px;
+  border: 0.1px solid rgb(205, 202, 202) ;
 }
 
 .add-btn {
-  
+  cursor: pointer;
+  padding: 5px 12px;
+  border: 0.1px solid rgb(205, 202, 202) ;
 }
