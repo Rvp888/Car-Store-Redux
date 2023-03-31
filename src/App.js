@@ -28,11 +28,11 @@ function App() {
   }
 
   return (
-      <div className='App'>
+      <div className='app'>
           {
             myState.map((car) => {
               return (
-                <div key={car.id}>
+                <div key={car.id} className='car-store' >
                   <h5>{car.name}</h5>
                   <button onClick={() => handleBuyCar(car.id)}>Buy Car</button>
                 </div>

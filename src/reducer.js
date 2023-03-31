@@ -19,12 +19,15 @@ const initialState = [
 export const carReducer = (state = initialState, action) => {
 
     switch(action.type) {
+
         case 'BUY_CAR':
             return state.filter(ele => ele.id != action.payload);
+
         case 'SALE_CAR':
-            const temp = state;
+            const temp = [...state];
             temp.push(action.payload);
-            return [...temp];
+            return temp;
+
         default:
             return state;
     }

@@ -1,0 +1,40 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  margin: 50px;
+  width: 200px;
+}
+
+.car-store {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.car-store h5 {
+  background-color: rgb(58, 113, 115);
+  color: white;
+  padding: 5px 10px 7px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.car-store button {
+  cursor: pointer;
+  padding: 5px 5px;
+}
