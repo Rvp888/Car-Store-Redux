@@ -22,7 +22,9 @@ export const carReducer = (state = initialState, action) => {
         case 'BUY_CAR':
             return state.filter(ele => ele.id != action.payload);
         case 'SALE_CAR':
-            return { noOfCars: state.noOfCars + 1 };
+            const temp = state;
+            temp.push(action.payload);
+            return [...temp];
         default:
             return state;
     }

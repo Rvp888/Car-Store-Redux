@@ -6,9 +6,10 @@ export const buyCar = (id) => {
     }
 }
 
-export const saleCar = () => {
+export const saleCar = (payload) => {
     return {
-        type: 'SALE_CAR'
+        type: 'SALE_CAR',
+        payload: payload
     }
 }
 
