@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { buyCar, saleCar } from './actions';
 
 
@@ -8,6 +8,7 @@ import { buyCar, saleCar } from './actions';
 
 function App() {
 
+  const myState = useSelector(store => store)
   const dispatch = useDispatch();
 
   const handleBuyCar = () => {
@@ -21,6 +22,7 @@ function App() {
   return (
       <div className='App'>
           <button onClick={handleBuyCar}>Buy Car</button>
+          {myState.noOfCars}
           <button onClick={handleSaleCar}>Sale Car</button>
       </div>
   );
