@@ -3,7 +3,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { buyCar, saleCar } from './actions';
 import { useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -20,7 +20,11 @@ function App() {
   }
 
   const handleSaleCar = () => {
-    dispatch(saleCar());
+    const idd = uuidv4();
+    dispatch(saleCar({
+      id: idd,
+      name: carName
+    }));
   }
 
   return (
@@ -39,6 +43,7 @@ function App() {
           {
             isSaleShow && <div>
               <input onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
+              <button onClick={handleSaleCar}>Sale Car</button>
             </div>
           }
       </div>
