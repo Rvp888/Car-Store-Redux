@@ -2,6 +2,7 @@
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { buyCar, saleCar } from './actions';
+import { useState } from 'react';
 
 
 
@@ -10,6 +11,9 @@ function App() {
 
   const myState = useSelector(store => store)
   const dispatch = useDispatch();
+
+  const [isSaleShow, setIsSaleShow] = useState(false);
+  const [carName, setCarName] = useState('');
 
   const handleBuyCar = (id) => {
     dispatch(buyCar(id));
