@@ -5,7 +5,7 @@ const initialState = {
 }
 
 
-const carReducer = (state = initialState, action) => {
+export const carReducer = (state = initialState, action) => {
 
     switch(action.type) {
         case 'BUY_CAR':
