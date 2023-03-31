@@ -21,9 +21,16 @@ function App() {
 
   return (
       <div className='App'>
-          <button onClick={handleBuyCar}>Buy Car</button>
-          {myState.noOfCars}
-          <button onClick={handleSaleCar}>Sale Car</button>
+          {
+            myState.map((car) => {
+              return (
+                <div>
+                  <h5>{car.name}</h5>
+                  <button onClick={() => handleBuyCar(car.id)}>Buy Car</button>
+                </div>
+              )
+            })
+          }
       </div>
   );
 }
