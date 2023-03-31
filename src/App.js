@@ -15,11 +15,11 @@ function App() {
   const [isSaleShow, setIsSaleShow] = useState(false);
   const [carName, setCarName] = useState('');
 
-  const handleBuyCar = (id) => {
+  const handleSellCar = (id) => {
     dispatch(buyCar(id));
   }
 
-  const handleSaleCar = () => {
+  const handleAddCar = () => {
     const idd = uuidv4();
     dispatch(saleCar({
       id: idd,
@@ -34,7 +34,7 @@ function App() {
               return (
                 <div key={car.id} className='car-store' >
                   <h5>{car.name}</h5>
-                  <button onClick={() => handleBuyCar(car.id)}>Buy Car</button>
+                  <button onClick={() => handleSellCar(car.id)}>Sell Car</button>
                 </div>
               )
             })
@@ -42,8 +42,8 @@ function App() {
           <button className='add-newcar-btn' onClick={() => setIsSaleShow(true)}>Add New Car</button>
           {
             isSaleShow && <div>
-              <input onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
-              <button onClick={handleSaleCar}>Sale Car</button>
+              <input className='car-input' onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
+              <button onClick={handleAddCar}>Add</button>
             </div>
           }
       </div>
