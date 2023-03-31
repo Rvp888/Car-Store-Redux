@@ -35,6 +35,12 @@ function App() {
               )
             })
           }
+          <button onClick={() => setIsSaleShow(true)}>Sale Car</button>
+          {
+            isSaleShow && <div>
+              <input onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
+            </div>
+          }
       </div>
   );
 }
