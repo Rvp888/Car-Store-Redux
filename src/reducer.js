@@ -1,8 +1,19 @@
 
 
-const initialState = {
-    noOfCars: 50
-}
+const initialState = [
+    {
+        id: 1,
+        name: 'Nexon'
+    },
+    {
+        id: 2,
+        name: 'Swift'
+    },
+    {
+        id: 3,
+        name: 'Baleno'
+    },
+]
 
 
 export const carReducer = (state = initialState, action) => {
