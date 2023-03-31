@@ -1,7 +1,7 @@
 
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { buyCar, saleCar } from './actions';
+import { addCar, sellCar } from './actions';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -41,9 +41,9 @@ function App() {
           }
           <button className='add-newcar-btn' onClick={() => setIsAddShow(true)}>Add New Car</button>
           {
-            isSaleShow && <div>
+            isAddShow && <div>
               <input className='car-input' onChange={(e) => setCarName(e.target.value)} placeholder='Enter Car name' />
-              <button onClick={handleAddCar}>Add</button>
+              <button className='add-btn' onClick={handleAddCar}>Add</button>
             </div>
           }
       </div>
